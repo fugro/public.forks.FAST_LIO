@@ -210,6 +210,11 @@ void Preprocess::oust64_handler(const sensor_msgs::PointCloud2::ConstPtr &msg)
       added_pt.y = pl_orig.points[i].y;
       added_pt.z = pl_orig.points[i].z;
       added_pt.intensity = pl_orig.points[i].intensity;
+      added_pt.reflectivity = pl_orig.points[i].reflectivity;
+      added_pt.ring = pl_orig.points[i].ring;
+      added_pt.ambient = pl_orig.points[i].ambient;
+      added_pt.range = pl_orig.points[i].range;
+      added_pt.t = pl_orig.points[i].t;
       added_pt.normal_x = 0;
       added_pt.normal_y = 0;
       added_pt.normal_z = 0;
@@ -269,6 +274,12 @@ void Preprocess::oust64_handler(const sensor_msgs::PointCloud2::ConstPtr &msg)
       added_pt.normal_y = 0;
       added_pt.normal_z = 0;
       added_pt.curvature = pl_orig.points[i].t * time_unit_scale; // curvature unit: ms
+
+      added_pt.reflectivity = pl_orig.points[i].reflectivity;
+      added_pt.ring = pl_orig.points[i].ring;
+      added_pt.ambient = pl_orig.points[i].ambient;
+      added_pt.range = pl_orig.points[i].range;
+      added_pt.t = pl_orig.points[i].t;
 
       pl_surf.points.push_back(added_pt);
     }

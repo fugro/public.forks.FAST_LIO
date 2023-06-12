@@ -171,6 +171,12 @@ void pointBodyToWorld_ikfom(PointType const * const pi, PointType * const po, st
     po->y = p_global(1);
     po->z = p_global(2);
     po->intensity = pi->intensity;
+    po->ambient = pi->ambient;
+    po->curvature = pi->curvature;
+    po->reflectivity = pi->reflectivity;
+    po->range = pi->range;
+    po->ring = pi->ring;
+    po->t = pi->t;
 }
 
 
@@ -183,6 +189,12 @@ void pointBodyToWorld(PointType const * const pi, PointType * const po)
     po->y = p_global(1);
     po->z = p_global(2);
     po->intensity = pi->intensity;
+    po->ambient = pi->ambient;
+    po->curvature = pi->curvature;
+    po->reflectivity = pi->reflectivity;
+    po->range = pi->range;
+    po->ring = pi->ring;
+    po->t = pi->t;
 }
 
 template<typename T>
@@ -205,6 +217,12 @@ void RGBpointBodyToWorld(PointType const * const pi, PointType * const po)
     po->y = p_global(1);
     po->z = p_global(2);
     po->intensity = pi->intensity;
+    po->ambient = pi->ambient;
+    po->curvature = pi->curvature;
+    po->reflectivity = pi->reflectivity;
+    po->range = pi->range;
+    po->ring = pi->ring;
+    po->t = pi->t;
 }
 
 void RGBpointBodyLidarToIMU(PointType const * const pi, PointType * const po)
@@ -216,6 +234,12 @@ void RGBpointBodyLidarToIMU(PointType const * const pi, PointType * const po)
     po->y = p_body_imu(1);
     po->z = p_body_imu(2);
     po->intensity = pi->intensity;
+    po->ambient = pi->ambient;
+    po->curvature = pi->curvature;
+    po->reflectivity = pi->reflectivity;
+    po->range = pi->range;
+    po->ring = pi->ring;
+    po->t = pi->t;
 }
 
 void points_cache_collect()
